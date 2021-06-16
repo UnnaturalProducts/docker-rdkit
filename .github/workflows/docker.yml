@@ -4,7 +4,7 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
-    - run: docker build -t docker-rdkit:${{github.sha}} .
+    - run: docker build -t docker-rdkit:${{github.sha}} -f Dockerfile
     - name: Push to ECR
       id: prod-ecr
       uses: jwalton/gh-ecr-push@v1
