@@ -1,6 +1,6 @@
 FROM ubuntu:focal-20210416
 
-RUN apt update && \ 
+RUN apt clean && apt update && \ 
    apt-get install -yq python3-rdkit \
       librdkit1 \
       rdkit-data \
