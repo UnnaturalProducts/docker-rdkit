@@ -19,5 +19,5 @@ jobs:
       env:
         IMAGE_TAG: ${{ github.sha }}
       run: |
-        docker build -t 430066262240.dkr.ecr.us-west-1.amazonaws.com/docker-rdkit:$IMAGE_TAG .
-        docker push 430066262240.dkr.ecr.us-west-1.amazonaws.com/docker-rdkit:$IMAGE_TAG
+        docker build -t 430066262240.dkr.ecr.us-west-1.amazonaws.com/ecr-prod:$IMAGE_TAG .
+        docker push 430066262240.dkr.ecr.us-west-1.amazonaws.com/ecr-prod:$IMAGE_TAG
