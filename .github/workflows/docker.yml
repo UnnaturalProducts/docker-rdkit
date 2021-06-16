@@ -4,7 +4,8 @@ jobs:
   Build:
     runs-on: ubuntu-18.04
     steps:
-	- uses: actions/checkout@v2
+    - name: checkout
+      uses: actions/checkout@v2
     - run: docker build -t docker-rdkit:${{github.sha}} .
     - name: Push to ECR
       id: prod-ecr
